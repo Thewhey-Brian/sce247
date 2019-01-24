@@ -13,31 +13,32 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question PS1: 
+Question PS1: The plot of quadratic-ticks0.csv is a line with slope but the plot of quadratic-time0.csv is
+a line lies in the X axis. 
 
-Question PS2:
+Question PS2: Because it has double loops
 	
-Question PS3: 
+Question PS3: It does not change the but change the value.
 	
-Question PS4: 
+Question PS4: n^2
 		
-Question PS5: 
+Question PS5: It will draw back to a line lies in the X axis.
 	
-Question A1:
+Question A1: The plot of time is almost shows as a constant and a tick is constant. THe value of n does not affect the operation times.
 	
-Question A2:
+Question A2: The larger the n is, the more time it takes. No, it isn't.
 	
-Question A3:
+Question A3: No, it just shows that the times each n takes is just the same.
 	
-Question A4:
+Question A4: Yes, it is. The larger the n is, the more time it takes. The allocation is putting each element of an array once a time.
 
-Question A5:
+Question A5: The group uses decimal representation. Decimal:log10(x)   tally marks:x   1
 
-Question A6:
+Question A6: [log2(x)] log2(x)/log10(x)
 
-Question A7:
+Question A7: decimal (because the curve of the log10(x) grows much faster than others)
 	
-Question C1:
+Question C1: 
 
 Question C2:
 
