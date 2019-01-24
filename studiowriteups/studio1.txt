@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1. Xinyu Guo      xinyu
+1. Xinyu Guo      xinyuguo
 2. Hong Chen	 chenhong1
 3. Yuanpei Wang   wang.yuanpei
 4.
