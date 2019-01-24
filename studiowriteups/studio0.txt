@@ -38,7 +38,7 @@ Question A6: [log2(x)] log2(x)/log10(x)
 
 Question A7: decimal (because the curve of the log10(x) grows much faster than others)
 	
-Question C1: 
+Question C1: It's a single line. Y = aX + b
 
 Question C2:
 
