@@ -7,6 +7,7 @@ public class TestOrderedArray extends TestBase {
 
 	@Override
 	public PriorityQueue<Integer> genHeap(int size) {
+		
 		return new OrderedArray<Integer>(size);
 	}
 

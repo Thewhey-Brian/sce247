@@ -66,6 +66,8 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+		array[size] = ans;
+		decrease(size);
 		return ans;
 	}
 
@@ -95,10 +97,36 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 * @param loc position in the array where the element has been
 	 *     decreased in value
 	 */
+	public void moveItem(int from, int to) {
+		Decreaser<T> cup;
+		cup = array[to];
+		array[to] = array[from];
+		array[from] = cup;
+		array[to].loc = to;
+	}
+	
 	void decrease(int loc) {
 		//
 		// As described in lecture
 		//
+		Decreaser<T> cup = null;
+		if(loc==1) {
+			return;
+		}
+		else{
+			if(this.array[loc].getValue().compareTo(this.array[loc/2].getValue())<0) {
+				cup = this.array[loc/2];
+				this.array[loc/2] = this.array[loc];
+				this.array[loc] = cup;
+				decrease(loc/2);
+				array[loc].loc = loc;
+				array[loc/2].loc = loc/2;
+		}
+//			kong = this.array[loc/2].getValue();
+//			this.array[loc/2] = this.array[loc];
+//			this.array[loc].getValue() = kong;
+		}
+		
 		
 	}
 	
@@ -119,6 +147,19 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+//		if(array[size]==null) {
+//			return null;
+//		}
+//		Decreaser<T> cup;
+//		cup=this.array[size];
+//		this.array[1] = cup;
+//		this.array[size] = null;
+//		array[1].loc = 1;
+		moveItem(size, 1);
+		array[size] = null;
+		//array[size].loc = size;
+		size--;
+		heapify(1);
 		return ans;
 	}
 
@@ -134,6 +175,67 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		// As described in lecture
 		//  FIXME
 		//
+		// no both child
+		if(where>size) {
+			return;
+		}
+		if(array[where]==null) {
+			return;
+		}
+		if(2*where>size) {
+			return;
+		}
+		if(array[2*where]==null) {
+			return;
+		}
+//		if(where>size||array[where]==null) {
+//			return;
+//		}
+//		if(2*where>size||array[2*where]==null) {
+//			return;
+//		}
+//		if(array[2*where+1]==null) {
+//			return;
+//		}
+		Decreaser<T> cup = null;
+		int minchild = where * 2;
+		if(where * 2 + 1 <= size && array[where*2 + 1].getValue().compareTo(array[where * 2].getValue()) < 0) {
+			minchild = where * 2 +1;
+		}
+		if(array[where].getValue().compareTo(array[minchild].getValue())>0) {
+			cup = this.array[minchild];
+			this.array[minchild] = this.array[where];
+			this.array[where] = cup;
+			array[where].loc = where;
+			array[minchild].loc = minchild;
+			heapify(minchild);
+		}
+		
+//		if(array[where]==null||array[2*where]==null||array[2*where+1]==null) {
+//			return;
+//		}
+//		Decreaser<T> cup = null;
+//		int t0 = this.array[2*where].getValue().compareTo(this.array[2*where+1].getValue());
+//		int t1 = this.array[where].getValue().compareTo(this.array[2*where].getValue());
+//		int t2 = this.array[where].getValue().compareTo(this.array[2*where+1].getValue());
+//		if(t1>1||t2>1) {
+//			if(t0>1) {
+//				cup = this.array[2*where+1];
+//				this.array[2*where+1] = this.array[where];
+//				this.array[where] = cup;
+//				heapify(2*where+1);
+//				array[where].loc = where;
+//				array[2*where+1].loc = 2*where+1;
+//			}
+//			else {
+//				cup = this.array[2*where];
+//				this.array[2*where] = this.array[where];
+//				this.array[where] = cup;
+//				heapify(2*where);
+//				array[where].loc = where;
+//				array[2*where].loc = 2*where;
+//			}
+//		}
 	}
 	
 	/**

@@ -13,26 +13,29 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: They are like the quadratic function.
 
-Question A2:
+Question A2: n means the length of list grows from 0 to n, and there is a while loop in its function. Hence, 
+			it is like there are a nest loop and the outcome is a quadratic function.
 
-Question B1:
+Question B1: It is a line. Because this method avoid using the loop.
 
-Question B2:
+Question B2: 1
 
-Question B3:
+Question B3: Yes. If adding too much pointer that taking the operation times more than the loop takes.
 
-Question C1:
+Question C1: 3n+1.
 
-Question C2:
+Question C2: Adding an operation time o. To add 1 when add a item in the list.
 
-Question C3:
+Question C3: The plot is a plate line. Yes, I add one complexity in the function addlast().
 
-Question D1:
+Question D1: n/2.
 
-Question D2:
+Question D2: Adding an constant variable mid pointing to the middle element. Whenever adding two elements,
+			let the mid moves to the next element. Yes, but not much. 
 
-Question D3:
+Question D3: With out track it one by one, just point it directly. This method adds one space complexity but 
+			simplify the time complexity.
 
-Question D4:
+Question D4: 

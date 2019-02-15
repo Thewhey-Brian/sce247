@@ -13,13 +13,13 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: ArrayType, ByteVslue, CharValue
 
-Question A2:
+Question A2: -1, 1, -1, 0
 
-Question A3:
+Question A3: The object's value is less than or its order is earlier than the other one or the first element of the set is less than the others.
 
-Question B1:
+Question B1: 
 
 Question B2:
 
