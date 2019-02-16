@@ -68,6 +68,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		array[size] = ans;
 		decrease(size);
+		ticker.tick(1);
 		return ans;
 	}
 
@@ -103,6 +104,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		array[to] = array[from];
 		array[from] = cup;
 		array[to].loc = to;
+		ticker.tick(4);
 	}
 	
 	void decrease(int loc) {
@@ -121,6 +123,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 				decrease(loc/2);
 				array[loc].loc = loc;
 				array[loc/2].loc = loc/2;
+				ticker.tick(4);
 		}
 //			kong = this.array[loc/2].getValue();
 //			this.array[loc/2] = this.array[loc];
@@ -159,6 +162,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		array[size] = null;
 		//array[size].loc = size;
 		size--;
+		ticker.tick(3);
 		heapify(1);
 		return ans;
 	}
@@ -199,8 +203,10 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 //		}
 		Decreaser<T> cup = null;
 		int minchild = where * 2;
+		ticker.tick(1);
 		if(where * 2 + 1 <= size && array[where*2 + 1].getValue().compareTo(array[where * 2].getValue()) < 0) {
 			minchild = where * 2 +1;
+			ticker.tick(1);
 		}
 		if(array[where].getValue().compareTo(array[minchild].getValue())>0) {
 			cup = this.array[minchild];
@@ -208,6 +214,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 			this.array[where] = cup;
 			array[where].loc = where;
 			array[minchild].loc = minchild;
+			ticker.tick(5);
 			heapify(minchild);
 		}
 		
