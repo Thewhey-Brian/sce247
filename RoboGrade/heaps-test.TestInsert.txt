@@ -1,0 +1,179 @@
+-------------------
+CSE247 Robot tester starts testing heaps on 2019-02-20 19:29:34 -0600
+
+========
+Testing in ./GradingRepos/repos/cse247-s19-students-xinyuguo: heaps as of Lab3LateInsert|1099628
+========
+Now in: /Users/jeremie/247HeadTA/cse247-s19-support/GradingRepos/repos/cse247-s19-students-xinyuguo
+Your branch is up to date with 'origin/master'.
+HEAD is now at 8194878 Ensured project name is Guo-467544
+No local changes to save
+
+Updating 8194878..6e9bc6b
+Fast-forward
+ .DS_Store                                     |  Bin 0 -> 8196 bytes
+ coursesupport/timing/examples/Linear.java     |    2 +-
+ coursesupport/timing/examples/Quadratic.java  |    7 +-
+ labs/heaps/MinHeap.java                       |  109 +++
+ labs/heaps/test/TestExtractMin.java           |   64 ++
+ labs/heaps/test/TestInsert.java               |   64 ++
+ labs/heaps/test/TestMinHeap.java              |   77 +-
+ labs/heaps/test/TestUtil.java                 |   94 +++
+ outputs/.DS_Store                             |  Bin 0 -> 10244 bytes
+ outputs/Copy of Copy of linear-ticks0.csv     |   10 +
+ outputs/Copy of allocates-time1.csv           |   21 +
+ outputs/Copy of growbyone-ticks0.csv          | 1000 +++++++++++++++++++++++++
+ outputs/Copy of growbyone-time0.csv           | 1000 +++++++++++++++++++++++++
+ outputs/ProbA-ticks0.csv                      |  100 +++
+ outputs/ProbA-time0.csv                       |  100 +++
+ outputs/ProbB-ticks0.csv                      |  100 +++
+ outputs/ProbB-time0.csv                       |  100 +++
+ outputs/ProbC-ticks0.csv                      |  100 +++
+ outputs/ProbC-time0.csv                       |  100 +++
+ outputs/ProbD-ticks0.csv                      |  100 +++
+ outputs/ProbD-time0.csv                       |  100 +++
+ outputs/ProbE-ticks0.csv                      |  100 +++
+ outputs/ProbE-ticks1.csv                      |  100 +++
+ outputs/ProbE-time0.csv                       |  100 +++
+ outputs/ProbE-time1.csv                       |  100 +++
+ outputs/addstwonumbers-ticks0.csv             |   21 +
+ outputs/addstwonumbers-time0.csv              |   21 +
+ outputs/allocates-ticks0.csv                  |   18 +
+ outputs/allocates-ticks1.csv                  |   21 +
+ outputs/allocates-time0.csv                   |   21 +
+ outputs/allocates-time1.csv                   |   21 +
+ outputs/doubling-ticks0.csv                   | 1000 +++++++++++++++++++++++++
+ outputs/doubling-ticks1.csv                   | 1000 +++++++++++++++++++++++++
+ outputs/doubling-ticks2.csv                   |  303 ++++++++
+ outputs/doubling-time0.csv                    | 1000 +++++++++++++++++++++++++
+ outputs/doubling-time1.csv                    | 1000 +++++++++++++++++++++++++
+ outputs/doubling-time2.csv                    |  303 ++++++++
+ outputs/growbyone-ticks0.csv                  | 1000 +++++++++++++++++++++++++
+ outputs/growbyone-time0.csv                   | 1000 +++++++++++++++++++++++++
+ outputs/heapsort-ticks0.csv                   |   31 +
+ outputs/heapsort-ticks1.csv                   |   44 ++
+ outputs/heapsort-ticks2.csv                   |   44 ++
+ outputs/heapsort-ticks3.csv                   |   21 +
+ outputs/heapsort-ticks4.csv                   |   17 +
+ outputs/heapsort-ticks5.csv                   |   28 +
+ outputs/heapsort-time0.csv                    |   31 +
+ outputs/heapsort-time1.csv                    |   44 ++
+ outputs/heapsort-time2.csv                    |   44 ++
+ outputs/heapsort-time3.csv                    |   21 +
+ outputs/heapsort-time4.csv                    |   17 +
+ outputs/heapsort-time5.csv                    |   28 +
+ outputs/heapticks.jpg                         |  Bin 0 -> 15741 bytes
+ outputs/linear-ticks0.csv                     |   10 +
+ outputs/linear-ticks1.csv                     |   10 +
+ outputs/linear-time0.csv                      |   10 +
+ outputs/linear-time1.csv                      |   10 +
+ outputs/list-addlast-notail-ticks0.csv        |   31 +
+ outputs/list-addlast-notail-ticks1.csv        |   31 +
+ outputs/list-addlast-notail-time0.csv         |   31 +
+ outputs/list-addlast-notail-time1.csv         |   31 +
+ outputs/list-addlast-withtail-ticks0.csv      |   31 +
+ outputs/list-addlast-withtail-time0.csv       |   31 +
+ outputs/list-size-ticks0.csv                  |   31 +
+ outputs/list-size-ticks1.csv                  |   31 +
+ outputs/list-size-time0.csv                   |   31 +
+ outputs/list-size-time1.csv                   |   31 +
+ outputs/quadratic-ticks0.csv                  |   10 +
+ outputs/quadratic-ticks1.csv                  |   10 +
+ outputs/quadratic-ticks2.csv                  |   10 +
+ outputs/quadratic-ticks3.csv                  |   10 +
+ outputs/quadratic-time0.csv                   |   10 +
+ outputs/quadratic-time1.csv                   |   10 +
+ outputs/quadratic-time2.csv                   |   10 +
+ outputs/quadratic-time3.csv                   |   10 +
+ studios/studio0/allocates/Allocates.java      |    2 +-
+ studios/studio0/growinglist/Rarrays.java      |   18 +-
+ studios/studio2/lists/LinkedListWithTail.java |   42 +-
+ studios/studio3/OrderedArray.java             |   48 +-
+ studios/studio3/UnorderedList.java            |   22 +-
+ studios/studio3/test/TestOrderedArray.java    |    1 +
+ studios/studio4/recurrence.xlsx               |  Bin 13305 -> 19761 bytes
+ studiowriteups/studio0.txt                    |   27 +-
+ studiowriteups/studio1.txt                    |   30 +-
+ studiowriteups/studio2.txt                    |   27 +-
+ studiowriteups/studio3.txt                    |    8 +-
+ studiowriteups/studio4.txt                    |    8 +-
+ 86 files changed, 11243 insertions(+), 167 deletions(-)
+ create mode 100644 .DS_Store
+ create mode 100644 labs/heaps/test/TestExtractMin.java
+ create mode 100644 labs/heaps/test/TestInsert.java
+ create mode 100644 labs/heaps/test/TestUtil.java
+ create mode 100644 outputs/.DS_Store
+ create mode 100644 outputs/Copy of Copy of linear-ticks0.csv
+ create mode 100644 outputs/Copy of allocates-time1.csv
+ create mode 100644 outputs/Copy of growbyone-ticks0.csv
+ create mode 100644 outputs/Copy of growbyone-time0.csv
+ create mode 100644 outputs/ProbA-ticks0.csv
+ create mode 100644 outputs/ProbA-time0.csv
+ create mode 100644 outputs/ProbB-ticks0.csv
+ create mode 100644 outputs/ProbB-time0.csv
+ create mode 100644 outputs/ProbC-ticks0.csv
+ create mode 100644 outputs/ProbC-time0.csv
+ create mode 100644 outputs/ProbD-ticks0.csv
+ create mode 100644 outputs/ProbD-time0.csv
+ create mode 100644 outputs/ProbE-ticks0.csv
+ create mode 100644 outputs/ProbE-ticks1.csv
+ create mode 100644 outputs/ProbE-time0.csv
+ create mode 100644 outputs/ProbE-time1.csv
+ create mode 100644 outputs/addstwonumbers-ticks0.csv
+ create mode 100644 outputs/addstwonumbers-time0.csv
+ create mode 100644 outputs/allocates-ticks0.csv
+ create mode 100644 outputs/allocates-ticks1.csv
+ create mode 100644 outputs/allocates-time0.csv
+ create mode 100644 outputs/allocates-time1.csv
+ create mode 100644 outputs/doubling-ticks0.csv
+ create mode 100644 outputs/doubling-ticks1.csv
+ create mode 100644 outputs/doubling-ticks2.csv
+ create mode 100644 outputs/doubling-time0.csv
+ create mode 100644 outputs/doubling-time1.csv
+ create mode 100644 outputs/doubling-time2.csv
+ create mode 100644 outputs/growbyone-ticks0.csv
+ create mode 100644 outputs/growbyone-time0.csv
+ create mode 100644 outputs/heapsort-ticks0.csv
+ create mode 100644 outputs/heapsort-ticks1.csv
+ create mode 100644 outputs/heapsort-ticks2.csv
+ create mode 100644 outputs/heapsort-ticks3.csv
+ create mode 100644 outputs/heapsort-ticks4.csv
+ create mode 100644 outputs/heapsort-ticks5.csv
+ create mode 100644 outputs/heapsort-time0.csv
+ create mode 100644 outputs/heapsort-time1.csv
+ create mode 100644 outputs/heapsort-time2.csv
+ create mode 100644 outputs/heapsort-time3.csv
+ create mode 100644 outputs/heapsort-time4.csv
+ create mode 100644 outputs/heapsort-time5.csv
+ create mode 100644 outputs/heapticks.jpg
+ create mode 100644 outputs/linear-ticks0.csv
+ create mode 100644 outputs/linear-ticks1.csv
+ create mode 100644 outputs/linear-time0.csv
+ create mode 100644 outputs/linear-time1.csv
+ create mode 100644 outputs/list-addlast-notail-ticks0.csv
+ create mode 100644 outputs/list-addlast-notail-ticks1.csv
+ create mode 100644 outputs/list-addlast-notail-time0.csv
+ create mode 100644 outputs/list-addlast-notail-time1.csv
+ create mode 100644 outputs/list-addlast-withtail-ticks0.csv
+ create mode 100644 outputs/list-addlast-withtail-time0.csv
+ create mode 100644 outputs/list-size-ticks0.csv
+ create mode 100644 outputs/list-size-ticks1.csv
+ create mode 100644 outputs/list-size-time0.csv
+ create mode 100644 outputs/list-size-time1.csv
+ create mode 100644 outputs/quadratic-ticks0.csv
+ create mode 100644 outputs/quadratic-ticks1.csv
+ create mode 100644 outputs/quadratic-ticks2.csv
+ create mode 100644 outputs/quadratic-ticks3.csv
+ create mode 100644 outputs/quadratic-time0.csv
+ create mode 100644 outputs/quadratic-time1.csv
+ create mode 100644 outputs/quadratic-time2.csv
+ create mode 100644 outputs/quadratic-time3.csv
+Going back in time to: Lab3LateInsert|1099628
+At hash ecd3eddfef850bbb8a0026c32be069dd3e906942
+
+================
+Lab is not counted -- failed unit tests
+================
+
+CSE247 Robot tester ends testing heaps on 2019-02-20 19:29:35 -0600
+-------------------
