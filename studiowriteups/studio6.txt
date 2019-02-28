@@ -13,32 +13,32 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1:  while(k<m+n-1) if A[i]<B[j] C[k]=A[i] i++ k++ else C[k]=A[i] j++ k++
 
 Question A2:
 
-Question A3:
+Question A3:  i+j+1->k
 
-Question A4:
+Question A4:  i+j=k i=1, j=1->k=2; i=n, j=m->k=m+n
 
-Question A5:
+Question A5:  
 
-Question B1:
+Question B1:  n
 
-Question B2:
+Question B2:  F(n) = 2F(n/2) + n
 
-Question B3:
+Question B3:  F(n) = \Theta(nlogn)
 
-Question B4:
+Question B4:  F(n) = kF(n/k)+n
 
-Question B5:
+Question B5:  F(n) = \Theta(nlogn)
 
-Question C1:
+Question C1:  S(n) = 2S(n/2)+n  S(n)=\Theta(nlogn)
 
-Question C2:
+Question C2:  just using two array alternatively
 
-Question C3:
+Question C3:  saving memory space
 
-Question C4:
+Question C4:  using the index i to point the parents and using 2i and 2i+1 indicate his children
 
-Question C5:
+Question C5:  extractmax and put this value to the beginning of this array.

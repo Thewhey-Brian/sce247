@@ -43,9 +43,9 @@ Question A14:
 
 Question A15:
 
-Question B1:
+Question B1: There is no statement whether x is the value we are looking for. The possibility that the number of elements in array could be even or odd.
 
-Question B2:
+Question B2: 
 
 Question B3:
 
