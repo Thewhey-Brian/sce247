@@ -1,0 +1,66 @@
+-------------------
+CSE247 Robot tester starts testing heaps on 2019-02-24 02:42:55 -0600
+
+========
+Testing in ./GradingRepos/repos/cse247-s19-students-xinyuguo: heaps as of 2019-02-16 00:10
+========
+Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-xinyuguo
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 41c6a35 robograde
+No local changes to save
+
+Updating 41c6a35..c254bd7
+Fast-forward
+ RoboGrade/heaps-test.TestExtractMin.txt | 192 ++++++++++++++++++++++++++++++++
+ 1 file changed, 192 insertions(+)
+ create mode 100644 RoboGrade/heaps-test.TestExtractMin.txt
+Going back in time to: 2019-02-16 00:10
+At hash 6e9bc6bec8a7b194c960a5b5e2780905995bbd7e
+
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-students/ key xinyuguo testfilesource test/TestInsert package heaps repo ./GradingRepos/repos/cse247-s19-students-xinyuguo
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-xinyuguo/labs/heaps/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/MinHeap
+    [mkdir] Created dir: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-xinyuguo/bin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-xinyuguo/bin
+
+BUILD SUCCESSFUL
+Total time: 4 seconds
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/test/TestInsert
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-xinyuguo/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Running test test.TestInsert
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+test:
+    [junit] Running heaps.test.TestInsert
+    [junit] Testsuite: heaps.test.TestInsert
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.584 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.584 sec
+    [junit] 
+    [junit] Testcase: testEmptyHeap took 0.099 sec
+    [junit] Testcase: testInsert took 0.397 sec
+    [junit] Testcase: testLocUpdatedDecrease took 0.034 sec
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing heaps on 2019-02-24 02:43:10 -0600
+-------------------
