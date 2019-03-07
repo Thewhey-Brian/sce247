@@ -18,6 +18,9 @@ public class HashPoints {
 		
 		Point p5 = new Point (-1, -6);
 		Point p6 = new Point (-1, -6);
+		
+		Point p7 = new Point (0, 0);
+		Point p8 = new Point (-1, 31);
 
 		//add points to the set
 		pointSet.add(p1);
@@ -26,6 +29,9 @@ public class HashPoints {
 		pointSet.add(p4);
 		pointSet.add(p5);
 		pointSet.add(p6);
+		pointSet.add(p7);
+		pointSet.add(p8
+				);
 
 		System.out.println("pointSet has " + pointSet.size() + " elements in it.");
 		System.out.println(pointSet);

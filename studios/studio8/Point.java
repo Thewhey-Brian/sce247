@@ -10,10 +10,22 @@ public class Point {
 		this.y = y;
 	}
 
-    // @Override
-	// public int hashCode() {
-	// compute a hashcode here!
-	//}
+     @Override
+	 public int hashCode() {
+    	 int ans = 1;
+    	 ans = 1*x+2*y;
+    	 return ans;
+	 
+	}
+	
+//	@Override
+//	public int hashCode() {
+//		final int prime = 31;
+//		int result = 1;
+//		result = prime * result + x;
+//		result = prime * result + y;
+//		return result;
+//	}
 	
 
 	@Override
@@ -31,10 +43,14 @@ public class Point {
 			return false;
 		return true;
 	}
+	
+	
 
 	@Override
 	public String toString() {
 		return "Point [x=" + x + ", y=" + y + "]";
 	}
+
+
 
 }

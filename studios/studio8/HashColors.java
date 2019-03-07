@@ -14,7 +14,7 @@ public class HashColors {
 	 * 	Hash function for colors
 	 */
 	public static int myColorHash(Color c) {
-		return c.hashCode();
+		return (int) ((long) c.hashCode() * 1737350767 >> 16);
 	}
 	
     /*
