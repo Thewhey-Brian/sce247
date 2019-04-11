@@ -1,6 +1,7 @@
 package hash;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 //
 // STRINGTABLE.JAVA
@@ -26,8 +27,12 @@ public class StringTable {
 	public StringTable(int nBuckets)
     {
     	this.nBuckets = nBuckets;
+    	this.size=0;
     	buckets = new LinkedList[nBuckets];
-	
+//    	for(int i=0; i<this.nBuckets; ++i) {
+//    		buckets[i] = null;
+//    	}
+    	
     	// TODO - fill in the rest of this method to initialize your table
     }
     
@@ -41,9 +46,35 @@ public class StringTable {
      */
     public boolean insert(Record r) 
     {  
+    	
+//    	if(this.nBuckets==0) {
+//    		return false;
+//    	}
+    	int num = toIndex(stringToHashCode(r.key));
+    	
+    	if(buckets[num]==null) {
+    		buckets[num] = new LinkedList<Record>();
+    	}
+    	
+    	//for(int i=0; i<this.nBuckets; ++i) {
+    		for(Record re : buckets[num]) {
+        		if(re.key.equals(r.key)) {
+    			return false;
+        		}	
+    		}
+    	//}
+
+    	buckets[num].add(r);
+    	size++;
+//    	for(int i=0; i<this.nBuckets; ++i) {
+//    		if(buckets[i].get(i)==null) {
+//    			buckets[i].add(r);
+//    			return true;
+//    		}
+//    	}
     	// TODO - implement this method
 	
-    	return false;
+    	return true;
     }
     
     
@@ -55,6 +86,21 @@ public class StringTable {
      */
     public Record find(String key) 
     {
+    	int num = toIndex(stringToHashCode(key));
+//    	if(this.nBuckets==0) {
+//    		return null;
+//    	}
+    	if(buckets[num]==null) {
+    		return null;
+    	}
+    	for(Record re : buckets[num]) {
+    		if(re.key.equals(key)) {
+    			return re;
+   			}
+   		}
+//    		if(buckets[i].get(i).key == key) {
+//    			return buckets[i].get(i);
+//    		}
     	// TODO - implement this method
 	
     	return null;
@@ -69,6 +115,23 @@ public class StringTable {
      */
     public void remove(String key) 
     {
+    	int num = toIndex(stringToHashCode(key));
+    	if(buckets[num]==null) {
+    		return;
+    	}
+    	ListIterator<Record> re = buckets[num].listIterator();
+    	while(re.hasNext() ) {
+    		if(re.next().key.equals(key)) {
+    			re.remove();
+    			size--;
+    			return;
+    		}
+   		}
+//    		if(buckets[i].get(i).key==key) {
+//    			buckets[i]=null;
+//    		}
+    	
+    	//find, remove
     	// TODO - implement this method
     }
     
@@ -88,9 +151,14 @@ public class StringTable {
      */
     private int toIndex(int hashcode)
     {
+    	double ans = 0;
+    	ans = Math.abs((hashcode * ((Math.sqrt(5)-1)/2)) % 1.0);
+    	
+    	
+    	
     	// Fill in your own hash function here
 	
-    	return 0;
+    	return (int)(ans * nBuckets);
     }
     
     
