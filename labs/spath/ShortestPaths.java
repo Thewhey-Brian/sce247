@@ -50,7 +50,7 @@ public class ShortestPaths {
     	this.g           = g;
     	this.weights     = weights;
 
-    	this.startVertex = startVertex;	
+    	this.startVertex = startVertex;
 	
     	this.handles     = new HashMap<Vertex, Decreaser<VertexAndDist>>();
     	this.parentEdges = new HashMap<Vertex, Edge>();
@@ -80,6 +80,8 @@ public class ShortestPaths {
     		Decreaser<VertexAndDist> d = pq.insert(new VertexAndDist(v, inf));
     		handles.put(v, d);
     		parentEdges.put(v, null);
+    		//v.edgesFrom().iterator().hasNext();
+    		//v.edgesFrom().iterator().next();
     	}
 	
     	//
@@ -93,6 +95,10 @@ public class ShortestPaths {
     	Decreaser<VertexAndDist> startHandle = handles.get(startVertex);
     	VertexAndDist vd = startHandle.getValue();
     	startHandle.decrease(new VertexAndDist(vd.vertex, 0));
+    	
+//    	startHandle.decrease(startHandle);
+//    	startHandle.getValue().distance = 0;
+//    	startHandle.decrease(newvalue);
 	
     	//
     	// OK, now it's up to you!
@@ -100,6 +106,21 @@ public class ShortestPaths {
     	// recording the parent edges of each vertex in parentEdges.
     	// FIXME
     	//
+    	while(!pq.isEmpty()) {
+    		VertexAndDist v = pq.extractMin();
+    		for(Edge i : v.vertex.edgesFrom()) {
+    			Vertex j = i.to;
+    			int cur = v.distance+weights.get(i);
+    			Decreaser<VertexAndDist> n = handles.get(j);
+    			VertexAndDist pre = n.getValue();
+    			if(cur<pre.distance) {
+    		    	n.decrease(new VertexAndDist(pre.vertex, cur));
+    		    	//update parenEdges
+    		    	parentEdges.put(j, i);
+    			}
+    		}
+    	}
+    
     }
     
     
@@ -112,11 +133,17 @@ public class ShortestPaths {
     //
     public LinkedList<Edge> returnPath(Vertex endVertex) {
     	LinkedList<Edge> path = new LinkedList<Edge>();
+    	
 	
     	//
     	// FIXME: implement this using the parent edges computed in run()
     	//
-	
+    	//path.add(parentEdges.get(endVertex));
+    	Edge next = parentEdges.get(endVertex);
+    	while(next!=null) {
+    		path.addFirst(next);
+    		next = parentEdges.get(next.from);
+    	}	
     	return path;
     }
     

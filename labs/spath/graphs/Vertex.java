@@ -13,7 +13,7 @@ public class Vertex {
     // every time we allocate a new Vertex
     private static int count = 0;
     
-    // edges *out of* this vertex
+    // edges *out of* this vertext
     final private ArrayList<Edge> successors;
     
     // edges *into* this vertex
